@@ -336,10 +336,8 @@ public class MapGenerator : MonoBehaviour {
 
 	void RandomFillMap() {
 		if (useRandomSeed) {
-            System.Random random = new System.Random();
-            int randomNumber = random.Next();
-			seed = randomNumber.ToString();
-        }
+			seed = DateTime.Now.Ticks.ToString();
+		}
 
 		System.Random pseudoRandom = new System.Random(seed.GetHashCode());
 
